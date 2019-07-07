@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`distance Component input value change end input value should change on keypress 1`] = `ReactWrapper {}`;
+
+exports[`distance Component input value change start input value should change on keypress 1`] = `ReactWrapper {}`;
+
+exports[`distance Component rendering component snapshot 1`] = `ShallowWrapper {}`;

@@ -1,0 +1,43 @@
+.addNodes {
+  padding: 40px;
+  text-align: left;
+}
+
+.distance {
+  padding: 40px;
+  text-align: left;
+}
+
+/* Inputs */
+.startRouteInput {
+  display: block;
+  margin-top: 10px;
+  padding: 8px;
+}
+
+.endRouteInput {
+  display: block;
+  margin-top: 10px;
+  padding: 8px;
+}
+
+.addNodeInput {
+  display: block;
+  margin-top: 10px;
+  padding: 8px;
+}
+
+.addEdgeInput {
+  display: block;
+  margin-top: 10px;
+  padding: 8px;
+}
+
+/* Buttons */
+.routeButton {
+  padding: 10px;
+  border: 1px solid blue;
+  color: white;
+  background-color: blue;
+  cursor: pointer;
+}

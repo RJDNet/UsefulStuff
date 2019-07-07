@@ -1,0 +1,2 @@
+export const FETCH_NUMBER = 'FETCH_NUMBER';
+export const FETCHED_NUMBER = 'FETCHED_NUMBER';

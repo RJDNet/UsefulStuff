@@ -1,0 +1,38 @@
+// Import file names _import.scss
+@import 'import';
+
+// Variable
+$_fontSize: 26px;
+
+// Mixin, functions
+@mixin mix($fonts) {
+  color: blue;
+  font-size: $fonts;
+}
+
+// Extend, DRY
+%header-styles {
+  color: orange;
+  font-size: 10px;
+}
+
+
+
+
+
+
+// Extending
+h1 {
+  @extend %header-styles;
+}
+
+// Nesting with mixin
+ul {
+  li {
+    h2 {
+      a { 
+        @include mix(10px);
+      }
+    }
+  }
+}

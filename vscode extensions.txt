@@ -1,0 +1,19 @@
+Node.js Modules Intellisense
+Auto Import
+Bracket Pair Colorizer
+ESLint
+Live Server
+
+file-icons
+VSCode Great Icons
+vscode-icons
+
+C#
+
+ES7 React/Redux/GraphQL/React-Native snippets
+
+Sass
+
+GraphQL for VSCode
+
+
