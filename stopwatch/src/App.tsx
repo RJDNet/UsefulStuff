@@ -11,10 +11,11 @@ declare global {
 }
 
 interface IStopWatchProps {
-  time: number
-  running: Boolean
-  onStop: () => void
-  onStart: () => void
+  time?: number
+  running?: Boolean
+  onStop?: () => void
+  onStart?: () => void
+  onReset?: () => void
 }
 
 interface IStopWatchState {
@@ -27,6 +28,7 @@ let reducer = (state = { running: false, time: 0 }, action: { type: string }) =>
     case 'START': return Object.assign({}, state, { running: true });
     case 'STOP': return Object.assign({}, state, { running: false });
     case 'TICK': return Object.assign({}, state, { time: state.time + (state.running ? 1 : 0) });
+    case 'RESET': return Object.assign({}, state, { running: false, time: 0 });
     default: return state;
   }
 };
@@ -37,20 +39,26 @@ const mapStateToProps = (state: IStopWatchState) => state;
 
 const mapDispatchToProps = (dispatch: Function, props: IStopWatchProps) => ({
   onStart: () => { dispatch({ type: 'START' }); },
-  onStop: () => { dispatch({ type: 'STOP' }); }
+  onStop: () => { dispatch({ type: 'STOP' }); },
+  onReset: () => { dispatch({ type: 'RESET' }); }
 });
 
 let StopWatch = ReactRedux.connect(mapStateToProps, mapDispatchToProps)((props: IStopWatchProps) => {
-  let { time, running, onStop, onStart } = props;
+  let { time, running, onStop, onStart, onReset } = props;
+
+  if (!time) return <p>Time doesn't exist in this universe</p>;
 
   let minutes = Math.floor(time / 60);
   let seconds = time - (minutes * 60);
   let secondsFormatted = `${seconds < 10 ? '0' : ''}${seconds}`;
 
-  return <div>
-    <p>{minutes}:{secondsFormatted}</p>
-    <button onClick={running ? onStop : onStart}>{running ? 'Stop' : 'Start'}</button>
-  </div>
+  return (
+    <div>
+      <p>{minutes}:{secondsFormatted}</p>
+      <button onClick={running ? onStop : onStart}>{running ? 'Stop' : 'Start'}</button>
+      <button onClick={onReset}>Reset</button>
+    </div>
+  );
 });
 
 class App extends Component {
