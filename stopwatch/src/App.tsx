@@ -45,8 +45,9 @@ const mapDispatchToProps = (dispatch: Function, props: IStopWatchProps) => ({
 
 let StopWatch = ReactRedux.connect(mapStateToProps, mapDispatchToProps)((props: IStopWatchProps) => {
   let { time, running, onStop, onStart, onReset } = props;
+  console.log(props);
 
-  if (!time) return <p>Time doesn't exist in this universe</p>;
+  if (time === undefined || null) return <p>Time doesn't exist here!</p>;
 
   let minutes = Math.floor(time / 60);
   let seconds = time - (minutes * 60);
@@ -60,6 +61,8 @@ let StopWatch = ReactRedux.connect(mapStateToProps, mapDispatchToProps)((props: 
     </div>
   );
 });
+
+// let StopWatchContainer = ReactRedux.connect()
 
 class App extends Component {
   render() {
