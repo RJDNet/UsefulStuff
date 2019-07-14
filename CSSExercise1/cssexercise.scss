@@ -1,0 +1,49 @@
+// Descendant Selector
+.a-block {
+  & > .a-other {
+    & > .a-block__element {
+      color: red;
+      
+      & > .a-other {
+        & > .a-block__element {
+          color: red;
+        }
+      }
+    }
+  }
+} 
+
+// Children Selector
+.b-block {
+  & > {
+      .b-block__element {
+        color: red;
+      }
+  }
+}
+
+// Adjacent Sibling Selector
+.c-block {
+  & > .c-block__element1 + .c-block__element2 {
+    color: red;
+  }
+}
+
+// General Sibling Selector
+.d-block {
+  & > .d-block__element1 ~ .d-block__element2 {
+    color: red
+  }
+}
+
+// Multiple Classes 1
+.e-block.e-block__element {
+  color: red;
+}
+
+// Multiple Classes 2
+.f-block.f-block__element.f-block__element--modifier {
+  color: red;
+}
+
+

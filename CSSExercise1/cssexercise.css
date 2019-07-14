@@ -1,0 +1,28 @@
+.a-block > .a-other > .a-block__element {
+  color: red;
+}
+
+.a-block > .a-other > .a-block__element > .a-other > .a-block__element {
+  color: red;
+}
+
+.b-block > .b-block__element {
+  color: red;
+}
+
+.c-block > .c-block__element1 + .c-block__element2 {
+  color: red;
+}
+
+.d-block > .d-block__element1 ~ .d-block__element2 {
+  color: red;
+}
+
+.e-block.e-block__element {
+  color: red;
+}
+
+.f-block.f-block__element.f-block__element--modifier {
+  color: red;
+}
+/*# sourceMappingURL=cssexercise.css.map */

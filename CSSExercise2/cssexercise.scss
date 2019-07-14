@@ -1,0 +1,17 @@
+.to-do-list {
+  & > .to-do-list__list-item:not(.to-do-list__list-item--overdue):not(.to-do-list__list-item--done) {
+    color: green;
+  }
+  
+  & > .to-do-list__list-item.to-do-list__list-item--overdue {
+    color: red;
+  }
+  
+  & > .to-do-list__list-item.to-do-list__list-item--done {
+    color: gray;
+  }
+  
+  & > :not(.to-do-list__list-item--done):hover {
+    font-weight: bold;
+  }
+}

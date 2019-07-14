@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+
+  <link rel="stylesheet" href="cssexercise.css">
+</head>
+
+<body>
+  <div class='container'>
+    <h1>Write the CSS to target the elements with an asterisk.</h1>
+    <div class='title'>
+      Descendant Selector
+    </div>
+    <div class='a-block'>
+      block
+      <div class='a-other'>
+        other
+        <div class='a-block__element'>
+          block__element *
+          <div class='a-other'>
+            other
+            <div class='a-block__element'>
+              block__element *
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class='a-block__element'>
+      block__element
+    </div>
+
+    <div class='title'>
+      Child Selector
+    </div>
+    <div class='b-block'>
+      block
+      <div class='b-other'>
+        other
+        <div class='b-block__element'>
+          block__element
+        </div>
+      </div>
+      <div class='b-block__element'>
+        block__element *
+      </div>
+    </div>
+    <div class='b-block__element'>
+      block__element
+    </div>
+
+    <div class='title'>
+      Adjacent Sibling Selector
+    </div>
+    <div class='c-block'>
+      block
+      <div class='c-block__element2'>
+        block__element2
+      </div>
+      <div class='c-block__element1'>
+        block__element1
+      </div>
+      <div class='c-block__element1'>
+        block__element1
+      </div>
+      <div class='c-block__element2'>
+        block__element2 *
+      </div>
+      <div class='c-block__element2'>
+        block__element2
+      </div>
+    </div>
+
+    <div class='title'>
+      General Sibling Selector
+    </div>
+    <div class='d-block'>
+      block
+      <div class='d-block__element2'>
+        block__element2
+      </div>
+      <div class='d-block__element1'>
+        block__element1
+      </div>
+      <div class='d-block__element1'>
+        block__element1
+      </div>
+      <div class='d-block__element2'>
+        block__element2 *
+      </div>
+      <div class='d-block__element2'>
+        block__element2 *
+      </div>
+    </div>
+
+    <div class='title'>
+      Multiple Classes 1
+    </div>
+    <div class='e-block'>
+      block
+      <div class='e-other'>
+        other
+        <div class='e-block__element'>
+          block__element
+        </div>
+      </div>
+      <div class='e-block e-block__element'>
+        block block__element *
+      </div>
+      <div class='e-block__element e-block'>
+        block__element block *
+      </div>
+      <div class='e-block__element e-block e-other'>
+        block__element block other *
+      </div>
+    </div>
+    <div class='e-block__element'>
+      block__element
+    </div>
+    <div class='e-block e-block__element'>
+      block block__element *
+    </div>
+
+    <div class='title'>
+      Multiple Classes 2
+    </div>
+    <div class='f-block'>
+      block
+      <div class='f-other'>
+        other
+        <div class='f-block__element'>
+          block__element
+        </div>
+      </div>
+      <div class='f-block f-block__element'>
+        block block__element
+      </div>
+      <div class='f-block f-block__element f-block__element--modifier'>
+        block block__element block__element--modifier *
+      </div>
+    </div>
+    <div class='f-block__element'>
+      block__element
+    </div>
+    <div class='f-block f-block__element f-block__element--modifier'>
+      block block__element block__element--modifier *
+    </div>
+
+  </div>
+
+
+</body>
+
+</html>
